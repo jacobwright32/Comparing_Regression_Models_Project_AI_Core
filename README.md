@@ -58,7 +58,7 @@ Steps and python folders
       - To improve W: b = b - lr*b'
     
     * Step 12: Repetition
-      - Repete from Step 7 to Step 11 either for a set number of iterations or until the loss is below a satifactory level. 
+      - Repeat from Step 7 to Step 11 either for a set number of iterations or until the loss is below a satifactory level. 
 
 
 
