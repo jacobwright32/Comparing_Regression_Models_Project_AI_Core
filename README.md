@@ -67,21 +67,6 @@ Steps and python folders
 
 Imported Libaries
 -----------   
-
-1. selenium import webdriver
-2. selenium.webdriver.common import keys
-3. selenium.webdriver.common.keys import Keys
-4. time import sleep
-5. datetime import timedelta, datetime
-6. pprint import pprint
-7. import pandas as pd
-8. import json
-
-Amount of Data Scraped
-----------------------
-
-* 560 cities have been scraped
-* Each city contains 12 years of weather data
-* 4,568 rows per city
-* 11 columns per city
-* A total of 2,558,080 rows x 11 columns
+* from sklearn import datasets
+* import numpy as np
+* import matplotlib.pyplot as plt
