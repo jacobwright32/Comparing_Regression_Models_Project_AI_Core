@@ -11,11 +11,11 @@ Data scraping:
 
   * Linear_Regression_From_Scratch.py
     1. Load Data
-    * Load in the dataset you want to try to model.
+      * Load in the dataset you want to try to model.
     2. Split The Data
-    * Split the data into Features (X) and Labels (y)
-    * X will take the shape M*N with M being the number of features your are using and N being the number of examples you have
-    * y will take the shape of 1xN with N being the number of examples you have. 
+      * Split the data into Features (X) and Labels (y)
+      * X will take the shape M*N with M being the number of features your are using and N being the number of examples you have
+      * y will take the shape of 1xN with N being the number of examples you have. 
     3. Split the data again into Train, Validation and Test sets.
     * 
 
