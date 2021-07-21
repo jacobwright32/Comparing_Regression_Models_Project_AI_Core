@@ -33,15 +33,16 @@ Data scraping:
     * Step 5: Batch your X and Y
       - Batches are recommended if you have large datasets the size of the batch is usually a power of 2 e.g. (2,4,8,16,32...)
     
-    * Step 6: Initalising a random Weight and Bias
+    * Step 6: Initalising a random Weight (W) and Bias (b)
       - A random Weight and Bias is initialised setting up the model which will use gradient descent to improve these two values
       - W is a Vector with shape Nx1 with N being the number of features
-      - B is a Scalar
+      - b is a Scalar
 
     * Step 7: Predict Ŷ using X
       - Work out your predicted y
-      - This is done
+      - This is done using the equation Ŷ = WX + b
 
+    * Step 8: 
 Imported Libaries
 -----------   
 
