@@ -11,7 +11,7 @@ Data scraping:
 
   #### Linear_Regression_From_Scratch.py
     
-    * Load Data
+    * <strong>Step 1:</strong> Load Data
       - Load in the dataset you want to try to model.
     
     * Split The Data
@@ -20,8 +20,8 @@ Data scraping:
       - y will take the shape of 1xN with N being the number of examples you have. 
     
     * Split the data again into Train, Validation and Test sets.
-      1. First split your data into Train and Test with 80% being the train data and 20% being the test data.
-      2. Then split your Train data again into Train and Validation sets with the same ratio as before.
+      - First split your data into Train and Test with 80% being the train data and 20% being the test data.
+      - Then split your Train data again into Train and Validation sets with the same ratio as before.
 
 Imported Libaries
 -----------   
