@@ -11,7 +11,7 @@ Data scraping:
 
   #### Linear_Regression_From_Scratch.py
     
-    * **Step 1:** Load Data
+    * __Step 1:__ Load Data
       - Load in the dataset you want to try to model.
     
     * **Step 2:** Split The Data
