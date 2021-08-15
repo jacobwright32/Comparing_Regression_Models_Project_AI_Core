@@ -1,5 +1,6 @@
 #%%
 from math import remainder
+from numpy.core.numeric import True_
 import seaborn as sns
 from sklearn import preprocessing
 from sklearn import model_selection
@@ -259,7 +260,7 @@ def model(model, params):
     scores = reg.fit(model)
     df_scores = pd.DataFrame(scores)
     df_scores.sort_values(by=['val_score'], ascending=False, inplace=True)
-    df_scores = df_scores.head(50)
+    df_scores = df_scores.head(1)
     return df_scores
 
 mypath = 'United_Kingdom_Weather_Data/'
@@ -287,20 +288,28 @@ scores_df = scores_df.append(linear_lasso_scores)
 scores_df = scores_df.append(svr_scores)
 scores_df = scores_df.append(decision_tree_scores)
 scores_df = scores_df.append(random_forest_scores)
-
-# linear_ridge_scores_df = pd.DataFrame(linear_scores)
-# linear_lasso_scores_df = pd.DataFrame(linear_ridge_scores)
-# knn_scores_df = pd.DataFrame(linear_lasso_scores)
-# svr_scores_df = pd.DataFrame(svr_scores)
-# decision_tree_scores_df = pd.DataFrame(decision_tree_scores)
-# random_forest_scores_df = pd.DataFrame(random_forest_scores)
-
+scores_df.plot(x='model_type', y=['val_score', 'val_MSE', 'val_MAE'], kind='bar', grid=True, title='Validation R_2 score, MSE and MAE for each top performing model')
+plt.savefig(fname='plots/Three_score_metrics', bbox_inches='tight')
+scores_df.plot(x='model_type', y=['val_score', 'time_taken'], kind='bar', grid=True, title='Validation score and time taken for each top performing model')
+plt.savefig(fname='plots/validation_score', bbox_inches='tight')
+scores_df.plot.scatter(x='time_taken', y='val_score', kind='scatter', grid=True, title='Validation R^2 score and time taken for each top performing model')
+plt.savefig(fname='plots/validation_score_vs_time_taken', bbox_inches='tight')
+scores_df.plot(x='model_type', y='val_score', kind='bar', grid=True, title='Validation R^2 score against time taken for each top performing model')
+plt.savefig(fname='plots/validation_score_bar', bbox_inches='tight')
+scores_df.plot(x='model_type', y='val_MSE', kind='bar', grid=True, title='Validation mean squared error')
+plt.savefig(fname='plots/validation_mse_bar', bbox_inches='tight')
+scores_df.plot(x='model_type', y='val_MAE', kind='bar', grid=True, title='Validation mean absolute error')
+plt.savefig(fname='plots/validation_mae_bar', bbox_inches='tight')
+scores_df.plot(x='model_type', y='time_taken', kind='bar', grid=True, title='Time taken')
+plt.savefig(fname='plots/time_taken_bar')
+scores_df.plot(x='model_type', y='time_taken', kind='line', grid=True, title='Time taken')
+plt.xticks(rotation=90)
+plt.savefig(fname='plots/time_taken_line',  bbox_inches='tight')
+scores_df.plot(x='model_type', y='val_score', kind='line', title='Validation R^2 score')
+plt.xticks(rotation=90)
+plt.savefig(fname='plots/validation_score_line', bbox_inches='tight')
+plt.show()
 
 # %%
 scores_df
-#%%
-scores_df.plot(x='model', Y='')
-plt.show()
-# %%
-df
 # %%
